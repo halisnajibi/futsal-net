@@ -1,0 +1,58 @@
+.header-left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+	.breadcrumb{
+		margin-bottom:0;
+	}
+	.dashboard_bar {
+		font-size: 38px;
+		font-weight: 600;
+		color:$black;
+		@include custommq ($max:1600px){
+			font-size: 34px;
+		}
+		@include respond('phone-land') {
+			display:none;
+		}
+		&.sub-bar{
+			font-size:30px;
+			@include custommq ($max:1600px){
+				font-size:24px;			
+			}
+			@include respond('phone-land') {
+				display:none;
+			}
+		}
+	}
+	.breadcrumb{
+		.breadcrumb-item{
+			@include custommq ($max:1600px){
+				font-size:14px;			
+			}
+		}
+		@include respond('phone-land') {
+			display:none;
+		}
+	}
+	.back-icon{
+		height:50px;
+		width:50px;
+		line-height:50px;
+		border-radius:18px;
+		text-align:center;
+		background:#EAEAEA;
+		color:#4F7086;
+		font-size: 32px;
+		margin-right: 18px;
+		@include respond('phone-land') {
+			display:none;
+		}
+	}
+}
+
+[data-sidebar-style="compact"] {
+    .header-left {
+        margin-left: 0;
+    }
+}
